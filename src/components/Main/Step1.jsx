@@ -1,3 +1,46 @@
+function Cities() {
+  const cities = [
+    { text: "請選擇縣市", value: "" },
+    { text: "基隆市", value: "KLU" },
+    { text: "新北市", value: "TPH" },
+    { text: "臺北市", value: "TPE" },
+    { text: "桃園市", value: "TYC" },
+    { text: "新竹縣", value: "HSH" },
+    { text: "新竹市", value: "HSC" },
+    { text: "苗栗市", value: "MAC" },
+    { text: "苗栗縣", value: "MAL" },
+    { text: "臺中市", value: "TXG" },
+    { text: "彰化縣", value: "CWH" },
+    { text: "彰化市", value: "CWS" },
+    { text: "南投市", value: "NTC" },
+    { text: "南投縣", value: "NTO" },
+    { text: "雲林縣", value: "YLH" },
+    { text: "嘉義縣", value: "CHY" },
+    { text: "嘉義市", value: "CYI" },
+    { text: "臺南市", value: "TNN" },
+    { text: "高雄市", value: "KHH" },
+    { text: "屏東縣", value: "IUH" },
+    { text: "屏東市", value: "PTS" },
+    { text: "宜蘭縣", value: "ILN" },
+    { text: "宜蘭市", value: "ILC" },
+    { text: "花蓮縣", value: "HWA" },
+    { text: "花蓮市", value: "HWC" },
+    { text: "臺東市", value: "TTC" },
+    { text: "臺東縣", value: "TTT" },
+    { text: "澎湖縣", value: "PEH" },
+    { text: "金門縣", value: "KMN" },
+    { text: "連江縣", value: "LNN" },
+  ];
+
+  return (
+    <>
+      {cities.map(city =>
+        <option value={city.value}>{city.text}</option>
+      )}
+    </>
+  )
+}
+
 export default function Step1() {
   return (
     <>
@@ -36,37 +79,8 @@ export default function Step1() {
             <div className="input-group input-w-lg-2 input-w-sm-full">
               <div className="input-label">縣市</div>
               <div className="select-container">
-                <select required>
-                  <option value="">請選擇縣市</option>
-                  <option value="KLU">基隆市</option>
-                  <option value="TPH">新北市</option>
-                  <option value="TPE">臺北市</option>
-                  <option value="TYC">桃園市</option>
-                  <option value="HSH">新竹縣</option>
-                  <option value="HSC">新竹市</option>
-                  <option value="MAC">苗栗市</option>
-                  <option value="MAL">苗栗縣</option>
-                  <option value="TXG">臺中市</option>
-                  <option value="CWH">彰化縣</option>
-                  <option value="CWS">彰化市</option>
-                  <option value="NTC">南投市</option>
-                  <option value="NTO">南投縣</option>
-                  <option value="YLH">雲林縣</option>
-                  <option value="CHY">嘉義縣</option>
-                  <option value="CYI">嘉義市</option>
-                  <option value="TNN">臺南市</option>
-                  <option value="KHH">高雄市</option>
-                  <option value="IUH">屏東縣</option>
-                  <option value="PTS">屏東市</option>
-                  <option value="ILN">宜蘭縣</option>
-                  <option value="ILC">宜蘭市</option>
-                  <option value="HWA">花蓮縣</option>
-                  <option value="HWC">花蓮市</option>
-                  <option value="TTC">臺東市</option>
-                  <option value="TTT">臺東縣</option>
-                  <option value="PEH">澎湖縣</option>
-                  <option value="KMN">金門縣</option>
-                  <option value="LNN">連江縣</option>
+                <select required> 
+                  <Cities />
                 </select>
               </div>
             </div>
