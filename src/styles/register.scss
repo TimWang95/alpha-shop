@@ -1,0 +1,147 @@
+%select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+section.register-container {
+  h2.register-title {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: var(--main-text);
+  }
+}
+section.form-container {
+  h3.form-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  section.form-body {
+    > .col {
+      display: flex;
+      justify-content: space-between;
+    }
+    .input-group {
+      margin-top: 24px;
+
+      .input-label {
+        margin-bottom: 8px;
+        color: var(--input-label);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+      }
+      input, select {
+        height: 40px;
+        width: 100%;
+        border: 1px solid #4A4A4A;
+        border-radius: 4px;
+        padding: 12px 0 12px 16px;
+      }
+      select {
+        -webkit-appearance: none;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--select-true);
+        &:invalid {
+          color: var(--select-false);
+        }
+      }
+    }
+  }
+}
+
+// select-arrow
+.select-container {
+  position: relative;
+  
+  &::after {
+    @extend %select-arrow;
+
+    content: "";
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: var(--select-arrow) transparent transparent transparent;
+    z-index: -1;
+  }
+}
+
+// shipping
+.radio-group {
+  align-items: center;
+  height: 60px;
+
+  margin-top: 24px;
+  padding: 11px 13px 11px 20px;
+  border: 1px solid var(--radio-group-unchecked);
+  border-radius: 4px;
+  cursor: pointer;
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 20px;
+    -webkit-appearance: none;
+  }
+
+  input[type="radio"]::before {
+    content: '';
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 1px solid var(--radio-bt);
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  input[type="radio"]:checked::before {
+    border: 6px solid var(--radio-bt);
+    background-color: #fff;
+  }
+
+
+  .radio-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: center;
+
+    > .col {
+      justify-content: space-between;
+      margin-bottom: 2px;
+      
+      .text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px; 
+      }
+    }
+
+    .price,
+    .period {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-break-point) {
+  section.register-container {
+    
+    max-width: 1100px;
+    // border: 1px solid tomato;
+    h2.register-title {
+      margin-top: 0;
+      font-size: 38px;
+    }
+  }
+
+
+ 
+}

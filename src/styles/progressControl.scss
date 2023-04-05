@@ -1,0 +1,40 @@
+section.progress-control-container {
+  border-top: 1px solid var(--progress-control-divider);
+  padding-top: 26px;
+
+  section.button-group {
+    justify-content: space-between;
+    
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      width: 156px;
+      height: 46px;
+      border: 0;
+      border-radius: 8px;
+      padding: 11px 39.5px;
+      cursor: pointer;
+    }
+
+    .prev {
+      background-color: transparent;
+    }
+
+    .next {
+      background-color: var(--pink);
+      color: #fff
+    }
+  }
+}
+
+
+@media screen and (min-width: $screen-break-point) {
+  section.progress-control-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
