@@ -2,6 +2,7 @@ import { useState } from "react"
 import Register from "./Register"
 import Cart from "../Cart/Cart"
 import ProgressControl from "./ProgressControl"
+import { CartProvider } from "../../context/CartContext"
 
 
 export default function Main() {
@@ -23,7 +24,7 @@ export default function Main() {
         setPhase("credit-card")
       }
       setNumber((n) => n + 1)
-      console.log("number", number)
+      // console.log("number", number)
     }
     // prev button
     if (target.className === "prev") {
@@ -33,7 +34,7 @@ export default function Main() {
         setPhase("address")
       }
       setNumber((n) => n - 1)
-      console.log("number", number)
+      // console.log("number", number)
     }
   }
 
@@ -41,6 +42,7 @@ export default function Main() {
     <>
       <main className="site-main">
         <div className="main-container">
+          <CartProvider>
             <Register 
               number={number}
               phase={phase}
@@ -51,6 +53,7 @@ export default function Main() {
               phase={phase}
               onClick={handlePhaseClick}
             />
+          </CartProvider>
         </div>
       </main>
     </>

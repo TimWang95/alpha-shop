@@ -1,28 +1,10 @@
 import { ReactComponent as Minus } from "../../assets/icons/minus.svg"
 import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
-import cartData from "../../context/CartContext"
-import { useState } from "react"
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 
-function CartData() {
-  const [ products, setProducts ] = useState(cartData)
-
-  function handleQuantityClick(productId, action) {
-    const nextProducts = products.map(product => {
-      if (product.id === productId) {
-        return {
-          ...products,
-          quantity: action === 'minus' ? product.quantity - 1 : product.quantity + 1
-        }
-      } else {
-        console.log(product.id)    
-        return product
-      }
-    })
-    const updataProducts = nextProducts.filter((product) => product.quantity > 0)
-    setProducts(updataProducts)
-  }
-
+function CartData({ products, handleQuantityClick }) {
   return (
     <>
       {products.map(product =>
@@ -53,14 +35,16 @@ function CartData() {
   )
 }
 
-export default function Cart() {
+export default function Cart() {  
+  const {products, handleQuantityClick} = useContext(CartContext)
+
   return (
     <>
       <section className="cart-container col col-lg-5 col-sm-12">
         <h3 className="cart-title">購物籃</h3>
 
         <section className="product-list col col-12" data-total-price="0">
-          <CartData />
+          <CartData products={products} handleQuantityClick={handleQuantityClick}/>
         </section>
 
         <section className="cart-info shipping col col-12">

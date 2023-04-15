@@ -1,4 +1,6 @@
-const dummyData = [
+import { useState, createContext } from 'react'
+
+export const dummyData = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -15,5 +17,32 @@ const dummyData = [
   },
 ]
 
-const cartData = dummyData
-export default cartData
+
+export const CartContext = createContext(dummyData)
+
+export function CartProvider({ children }) {
+  const [products, setProducts] = useState([...dummyData])
+
+  function handleQuantityClick(productId, action) {
+    const nextProducts = products.map(product => {
+      if (product.id === productId) {
+        return {
+          ...products,
+          quantity: action === 'minus' ? product.quantity - 1 : product.quantity + 1
+        }
+      } else {
+        console.log(product.id)    
+        return product
+      }
+    })
+    // 只留下大於 0 的商品
+    const updataProducts = nextProducts.filter((product) => product.quantity > 0)
+    setProducts(updataProducts)
+  }
+
+  return (
+    <CartContext.Provider value={{ products, handleQuantityClick }}>
+      {children}
+    </CartContext.Provider>
+  )
+}
