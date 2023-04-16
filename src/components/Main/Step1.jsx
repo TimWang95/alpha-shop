@@ -35,7 +35,7 @@ function Cities() {
   return (
     <>
       {cities.map(city =>
-        <option value={city.value}>{city.text}</option>
+        <option key={city.value} value={city.value}>{city.text}</option>
       )}
     </>
   )
