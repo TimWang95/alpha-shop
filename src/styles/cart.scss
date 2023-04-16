@@ -10,7 +10,7 @@ section.cart-container {
 }
 
 section.product-list {
-  .product-container {
+    .product-container {
     justify-content: space-between;
     height: 100px;
     margin-bottom: 16px;
@@ -54,6 +54,10 @@ section.product-list {
         line-height: 22px;
       }
     }
+  }
+
+  .noProduct {
+    margin-top: 30px;
   }
 }
 

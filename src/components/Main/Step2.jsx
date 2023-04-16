@@ -1,4 +1,4 @@
-export default function Step2() {
+export default function Step2({ onShippingOption }) {
   return (
     <>
       <form className="col col-12" data-phase="shipping">
@@ -6,7 +6,7 @@ export default function Step2() {
         <section className="form-body col col-12">
 
           <label className="radio-group col col-12" data-price="0">
-            <input id="shipping-standard" type="radio" name="shipping"  checked/>
+            <input id="shipping-standard" type="radio" name="shipping" onChange={(e) => onShippingOption(e)} checked/>
             <div className="radio-info">
               <div className="col col-12">
                 <div className="text">標準運送</div>
@@ -18,7 +18,7 @@ export default function Step2() {
           </label>
 
           <label className="radio-group col col-12" data-price="500">
-            <input id="shipping-dhl" type="radio" name="shipping" />
+            <input id="shipping-dhl" type="radio" name="shipping" onChange={(e) => onShippingOption(e)}/>
             <div className="radio-info">
               <div className="col col-12">
                 <div className="text">DHL 貨運</div>

@@ -35,8 +35,18 @@ function CartData({ products, handleQuantityClick }) {
   )
 }
 
-export default function Cart() {  
+export default function Cart({ shippingCost }) {  
   const {products, handleQuantityClick} = useContext(CartContext)
+  
+  const totalPrice = products.reduce((total, product) => {
+    return total + product.price * product.quantity
+  }, Number(shippingCost))
+  // console.log(`total:`, totalPrice)
+
+  let noProduct
+  if (products.length < 1) {
+    noProduct = `OwO 您的購物車目前沒有商品 !`
+  }
 
   return (
     <>
@@ -45,16 +55,17 @@ export default function Cart() {
 
         <section className="product-list col col-12" data-total-price="0">
           <CartData products={products} handleQuantityClick={handleQuantityClick}/>
+          <p className="noProduct">{noProduct}</p>
         </section>
 
         <section className="cart-info shipping col col-12">
           <div className="text">運費</div>
-          <div className="price">免費</div>
+          <div className="price">{shippingCost === 500 ? `$ ${shippingCost }` : '免費'}</div>
         </section>
 
         <section className="cart-info total col col-12">
           <div className="text">小計</div>
-          <div className="price">$5298</div>
+          <div className="price">${totalPrice.toLocaleString()}</div>
         </section>
       </section>
     </>

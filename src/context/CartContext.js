@@ -27,7 +27,7 @@ export function CartProvider({ children }) {
     const nextProducts = products.map(product => {
       if (product.id === productId) {
         return {
-          ...products,
+          ...product,
           quantity: action === 'minus' ? product.quantity - 1 : product.quantity + 1
         }
       } else {
