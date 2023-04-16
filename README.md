@@ -1,5 +1,7 @@
 # Alpha Shop
 AC 前端教案練習，使用 React 為電商網頁切版、實作畫面互動功能。
+![alt text](./public/checkout.gif)
+
 
 # 🚀 Getting start 開始使用
 1. 請先確認有安裝 Node.js 與 npm
