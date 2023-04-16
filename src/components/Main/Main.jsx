@@ -42,15 +42,6 @@ export default function Main() {
     }
   }
 
-  // function handleShippingCost(e) {
-  //   if (e.target.id === 'shipping-standard') {
-  //     setShippingCost(0)
-  //   } else if (e.target.id === 'shipping-dh1') {
-  //     setShippingCost(500)
-  //   }
-  //   console.log(e.target.id)
-  // }
-
   const handleShippingCost = (e) => {
     if (e.target.id === 'shipping-dhl') {
       setShippingCost(500)
