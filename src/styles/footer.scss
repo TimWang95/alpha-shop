@@ -10,16 +10,14 @@ footer.site-footer {
   footer.site-footer {
     display: block;
     margin-top: 124px;
+    background-color: var(--footer-background-color);
     
     .footer-container {
       display: flex;
       justify-content: space-between;
-  
-  
+      margin: 0 auto;
+      max-width: 1100px;
       height: 284px;
-      padding: 0 165px;
-      background-color: var(--footer-background-color);
-  
     }
   }
   
