@@ -22,7 +22,7 @@ section.product-list {
     .product-info {
       display: flex;
       flex-direction: column;
-      align-items: end;
+      align-items: flex-end;
 
       .product-name {
         font-weight: 400;
