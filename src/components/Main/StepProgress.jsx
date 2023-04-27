@@ -1,4 +1,4 @@
-import { ReactComponent as IconPageComplete } from "../../assets/icons/pg_complete.svg"
+import { ReactComponent as IconPageComplete } from "assets/icons/pg_complete.svg"
 
 function Progress({number, phase, step}) {
   return (

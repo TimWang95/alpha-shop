@@ -1,7 +1,7 @@
-import { ReactComponent as Minus } from "../../assets/icons/minus.svg"
-import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
+import { ReactComponent as Minus } from "assets/icons/minus.svg"
+import { ReactComponent as Plus } from "assets/icons/plus.svg"
 import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
+import { CartContext } from "context/CartContext"
 
 
 function CartData({ products, handleQuantityClick }) {

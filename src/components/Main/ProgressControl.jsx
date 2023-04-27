@@ -1,8 +1,8 @@
-import { ReactComponent as IconLeftArrow } from "../../assets/icons/leftArrow.svg"
-import { ReactComponent as IconRightArrow } from "../../assets/icons/rightArrow.svg"
+import { ReactComponent as IconLeftArrow } from "assets/icons/leftArrow.svg"
+import { ReactComponent as IconRightArrow } from "assets/icons/rightArrow.svg"
 import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
-import { CreditCardContext } from "../../context/CreditCardContext"
+import { CartContext } from "context/CartContext"
+import { CreditCardContext } from "context/CreditCardContext"
 
 function PrevBtn({ onClick }) {
   return (

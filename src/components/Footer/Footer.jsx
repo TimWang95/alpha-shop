@@ -1,7 +1,7 @@
-import { ReactComponent as IconLogo } from "../../assets/icons/logo.svg"
-import { ReactComponent as IconInstagram } from "../../assets/icons/instagram.svg"
-import { ReactComponent as IconFacebook } from "../../assets/icons/facebook.svg"
-import { ReactComponent as IconWhatsApp } from "../../assets/icons/whatsApp.svg"
+import { ReactComponent as IconLogo } from "assets/icons/logo.svg"
+import { ReactComponent as IconInstagram } from "assets/icons/instagram.svg"
+import { ReactComponent as IconFacebook } from "assets/icons/facebook.svg"
+import { ReactComponent as IconWhatsApp } from "assets/icons/whatsApp.svg"
 
 
 export default function Footer() {

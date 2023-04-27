@@ -1,9 +1,9 @@
 import { useState } from "react"
 import Register from "./Register"
-import Cart from "../Cart/Cart"
 import ProgressControl from "./ProgressControl"
-import { CartProvider } from "../../context/CartContext"
-import { CreditCardContext, creditCardDefault } from "../../context/CreditCardContext"
+import Cart from "components/Cart/Cart"
+import { CartProvider } from "context/CartContext"
+import { CreditCardContext, creditCardDefault } from "context/CreditCardContext"
 
 
 export default function Main() {

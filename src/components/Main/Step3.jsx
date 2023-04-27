@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CreditCardContext } from '../../context/CreditCardContext'
+import { CreditCardContext } from 'context/CreditCardContext'
 
 export default function Step3() {
   const { creditCardInfo, setCreditCardInfo } = useContext(CreditCardContext)
