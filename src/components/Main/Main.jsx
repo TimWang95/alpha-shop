@@ -16,8 +16,7 @@ export default function Main() {
   function handlePhaseClick(e) {
     const target = e.target
     const phaseControl = target.parentElement.dataset.phase
-    // console.log("target", target)
-    // console.log("phaseControl", target.parentElement)
+    
 
     // next button
     if (target.className === "next") {
@@ -28,7 +27,7 @@ export default function Main() {
         setPhase("credit-card")
       }
       setNumber((n) => n + 1)
-      // console.log("number", number)
+      
     }
     // prev button
     if (target.className === "prev") {
@@ -38,7 +37,7 @@ export default function Main() {
         setPhase("address")
       }
       setNumber((n) => n - 1)
-      // console.log("number", number)
+      
     }
   }
 

@@ -41,7 +41,7 @@ export default function Cart({ shippingCost }) {
   const totalPrice = products.reduce((total, product) => {
     return total + product.price * product.quantity
   }, Number(shippingCost))
-  // console.log(`total:`, totalPrice)
+  
 
   let noProduct
   if (products.length < 1) {

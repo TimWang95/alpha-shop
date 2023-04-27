@@ -36,12 +36,12 @@ export default function ProgressControl({ number, phase, onClick, shippingCost }
       total + product.price * product.quantity
     )
   }, Number(shippingCost))
-  // console.log(`totalPrice:`, totalPrice)
+  
   
   function handleSubmit(e) {
     const payment=`cardHolder: ${creditCardInfo.cardHolder} cardNumber: ${creditCardInfo.cardNumber} expireDate: ${creditCardInfo.expireDate} cvc: ${creditCardInfo.cvc} `
+    
     console.log(`information, ${payment}`)
-    // console.log(creditCardInfo)
     console.log(`Price: $ ${totalPrice.toLocaleString()} 元`)
   
   }
