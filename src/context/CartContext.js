@@ -31,7 +31,6 @@ export function CartProvider({ children }) {
           quantity: action === 'minus' ? product.quantity - 1 : product.quantity + 1
         }
       } else {
-        console.log(product.id)    
         return product
       }
     })
