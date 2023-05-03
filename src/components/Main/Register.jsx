@@ -6,7 +6,7 @@ import Step3 from "./Step3"
 export default function Register ({number, phase, onShippingOption}) {
   return (
     <>
-      <section class="register-container col col-lg-6 col-sm-12" 
+      <section className="register-container col col-lg-6 col-sm-12" 
       data-phase={number} 
       data-total-price="0"
       >

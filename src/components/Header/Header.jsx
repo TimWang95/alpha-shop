@@ -15,7 +15,7 @@ import { ReactComponent as IconSun } from "assets/icons/sun.svg"
           {/* <!-- navbar-toggle --> */}
           <input id="navbar-toggle" className="navbar-toggle" type="checkbox" />
 
-          <label for="navbar-toggle" className="burger-container">
+          <label htmlFor="navbar-toggle" className="burger-container">
             <IconToggle className="icon-toggle cursor-point"/>
           </label>
 
