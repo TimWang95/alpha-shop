@@ -23,19 +23,19 @@ import { ReactComponent as IconSun } from "assets/icons/sun.svg"
           <nav className="navbar-menu">
             <ul className="nav-list site-menu-list mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">男款</a>
+                <a className="nav-link" href="#home">男款</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">女款</a>
+                <a className="nav-link" href="#home">女款</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">最新消息</a>
+                <a className="nav-link" href="#home">最新消息</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">客製商品</a>
+                <a className="nav-link" href="#home">客製商品</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">聯絡我們</a>
+                <a className="nav-link" href="#home">聯絡我們</a>
               </li>
             </ul>
 
@@ -58,7 +58,7 @@ import { ReactComponent as IconSun } from "assets/icons/sun.svg"
           </nav>
 
           {/* <!-- logo --> */}
-          <a className="header-logo-container" href="#">
+          <a className="header-logo-container" href="#home">
             <IconLogo className="icon-logo cursor-point"/>
           </a>
         </div>
