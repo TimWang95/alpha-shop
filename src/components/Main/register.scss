@@ -283,6 +283,7 @@ section.form-container {
 @media screen and (min-width: $screen-break-point) {
   section.register-container {
     max-width: 1100px;
+    padding-bottom: 48px;
 
     h2.register-title {
       margin-top: 0;

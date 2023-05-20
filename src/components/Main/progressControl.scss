@@ -41,13 +41,3 @@ section.progress-control-container {
     }
   }
 }
-
-
-@media screen and (min-width: $screen-break-point) {
-  section.progress-control-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
