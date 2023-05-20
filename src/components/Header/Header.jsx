@@ -45,7 +45,7 @@ import { ReactComponent as IconSun } from "assets/icons/sun.svg"
                 <IconSearch className="nav-icon cursor-point" />
               </li>
               {/* <!-- cart --> */}
-              <li class="nav-item">
+              <li className="nav-item">
                 <IconCart className="nav-icon cursor-point" /> 
               </li>
               <li id="theme-toggle" className="nav-item">
